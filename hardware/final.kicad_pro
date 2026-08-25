@@ -564,7 +564,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../../../my-hackpad/hardware/gerbers/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
