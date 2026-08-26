@@ -14296,6 +14296,17 @@
 		(start 0 0)
 		(end 100 100)
 		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "e36410f7-5170-49b1-b2f7-756d86985c5c")
+	)
+	(gr_rect
+		(start 0 0)
+		(end 100 100)
+		(stroke
 			(width 0.1)
 			(type solid)
 		)

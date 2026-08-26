@@ -566,7 +566,7 @@
       "netlist": "",
       "plot": "../../../../my-hackpad/hardware/gerbers/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../final.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
