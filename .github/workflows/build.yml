@@ -12,6 +12,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install ARM Compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi
+
       - name: Install QMK
         run: |
           python3 -m pip install qmk
@@ -21,7 +26,7 @@ jobs:
         run: |
           mkdir -p ~/qmk_firmware/keyboards/hackpad/keymaps/default
           
-          cp firmware/info.json ~/qmk_firmware/keyboards/hackpad/
+          cp firmware/keyboard.json ~/qmk_firmware/keyboards/hackpad/
           cp firmware/rules.mk ~/qmk_firmware/keyboards/hackpad/
           cp firmware/keymap.c ~/qmk_firmware/keyboards/hackpad/keymaps/default/
 
