@@ -4,6 +4,11 @@
     "maintainer": "qmk",
     "processor": "RP2040",
     "bootloader": "rp2040",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x0001",
+        "device_version": "1.0.0"
+    },
     "matrix_size": {
         "cols": 3,
         "rows": 3
