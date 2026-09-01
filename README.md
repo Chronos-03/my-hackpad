@@ -1,3 +1,31 @@
+# My Custom Hackpad
+
+**Description:** This is a custom 4x2 macropad powered by a Seeed Studio XIAO RP2040. It features a rotary encoder, a 0.91" OLED display, per-key RGB backlighting, and underglow, all wrapped in a custom 3D-printed snap-fit case.
+
+## 📸 Overall Design
+![Overall Hackpad](images/overall1.png)
+![Overall Hackpad Alternate Angle](images/overall2.png)
+
+## ⚡ KiCAD Schematic & PCB Layout
+![Schematic](images/pcb1.png)
+![PCB Front](images/pcb2.png)
+![PCB Back](images/pcb3.png)
+
+## 🛠️ Case Assembly & Fit
+![Top Case Fit](images/topcase1.png)
+![Bottom Case Fit](images/bottomcase1.png)
+
+## 📋 Bill of Materials (BOM)
+* 1x Seeed Studio XIAO RP2040
+* 8x Mechanical Key Switches (e.g., Gateron)
+* 1x 0.91" I2C OLED Display (4-pin)
+* 1x Alps Rotary Encoder
+* 8x SK6812MINI-E RGB LEDs (Per-key backlight)
+* 4x RGB LEDs (Underglow)
+* 9x 1N4148 Diodes
+* 1x 3D Printed Top Plate
+* 1x 3D Printed Bottom Case
+
 ## 📐 Hardware Specifications & Layout Map
 
 | Component Category | Designation | Description / Model | X Position (mm) | Y Position (mm) |
