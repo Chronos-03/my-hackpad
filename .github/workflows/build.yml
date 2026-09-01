@@ -1,0 +1,37 @@
+name: QMK Cloud Build
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install QMK
+        run: |
+          python3 -m pip install qmk
+          qmk setup -y
+
+      - name: Prepare Keyboard Folder
+        run: |
+          mkdir -p ~/qmk_firmware/keyboards/hackpad/keymaps/default
+          
+          cp firmware/info.json ~/qmk_firmware/keyboards/hackpad/
+          cp firmware/rules.mk ~/qmk_firmware/keyboards/hackpad/
+          cp firmware/keymap.c ~/qmk_firmware/keyboards/hackpad/keymaps/default/
+
+      - name: Compile Firmware
+        run: |
+          cd ~/qmk_firmware
+          qmk compile -kb hackpad -km default
+
+      - name: Upload UF2 File
+        uses: actions/upload-artifact@v4
+        with:
+          name: hackpad-firmware
+          path: ~/qmk_firmware/*.uf2
